@@ -4,7 +4,7 @@
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
     <PackageId>Overt.Core.Data</PackageId>
     <Title></Title>
-    <PackageVersion>1.0.3.3</PackageVersion>
+    <PackageVersion>1.0.3.5</PackageVersion>
     <Authors>Sodao</Authors>
     <Description>Overt.Core.Data</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -45,12 +45,12 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="Microsoft.Data.SQLite" Version="2.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.112" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='NET46'">
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
-    <PackageReference Include="System.Data.SQLite" Version="1.0.106" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.112" />
   </ItemGroup>
 </Project>

@@ -124,10 +124,10 @@ namespace Overt.Core.Data
                 case DatabaseType.SQLite:
 #if ASP_NET_CORE
                     AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data"));
-                    return Microsoft.Data.Sqlite.SqliteFactory.Instance;
-#else
-                    return System.Data.SQLite.SQLiteFactory.Instance;
 #endif
+
+                    return System.Data.SQLite.SQLiteFactory.Instance;
+
             }
             return null;
         }

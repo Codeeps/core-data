@@ -509,11 +509,11 @@ namespace Overt.Core.Data
                     return DatabaseType.SqlServer;
                 });
             }
-#if ASP_NET_CORE
-            if (connection is Microsoft.Data.Sqlite.SqliteConnection)
-#else
+//#if ASP_NET_CORE
+//            if (connection is Microsoft.Data.Sqlite.SqliteConnection)
+//#else
             if (connection is System.Data.SQLite.SQLiteConnection)
-#endif
+//#endif
                 return DatabaseType.SQLite;
 
             return DatabaseType.MySql;
